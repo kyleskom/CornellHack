@@ -1,0 +1,25 @@
+{
+  "name": "streamingapi",
+  "version": "1.0.0",
+  "description": "Node streaming api for tweets",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nil"
+  },
+  "keywords": [
+    "nil"
+  ],
+  "author": "Jacob Siegel",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "firebase": "^3.4.0",
+    "mongoose": "^4.5.3",
+    "twitter": "^1.4.0"
+  }
+}
