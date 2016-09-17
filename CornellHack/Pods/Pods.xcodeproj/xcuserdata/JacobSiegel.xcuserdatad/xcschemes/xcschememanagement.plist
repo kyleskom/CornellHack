@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-CornellHack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>A00A377FCAE8780CE6B3AD80D37DD6B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C937863FA2054E7318951F029C145569</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C9385CD08EB7FFB420E6233427B14DBF</key>
+		<key>C62E56D40A1C87DA5989F481FF34BA6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
