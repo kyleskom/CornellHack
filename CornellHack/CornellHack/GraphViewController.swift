@@ -13,8 +13,6 @@ class GraphViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.setUpBarChart()
-		
 		self.tweetsRef = FIRDatabase.database().reference().child("tweets")
 	}
 
@@ -27,24 +25,28 @@ class GraphViewController: UIViewController {
 					self.trumpScores.append(score)
 				}
 				
-				print(self.trumpScores)
+				self.setUpBarChart()
 			} else {
 				print("doesnt work")
 			}
 		})
 	}
 	
-//	func pullFromClinton() {
-//		self.tweetsRef?.child("clinton").observe(.childAdded, with: { (snapshot) in
-//			
-//		})
-//	}
+	func pullFromClinton() {
+		self.tweetsRef?.child("clinton").observe(.childAdded, with: { (snapshot) in
+			if let sentimentScoreDict = snapshot.value as? [String: Any] {
+				if let score = sentimentScoreDict["sentimentScore"] as? Double {
+					self.clintonScores.append(score)
+				}
+			}
+		})
+	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(true)
 		
 		self.pullFromTrump()
-		//self.pullFromClinton()
+		self.pullFromClinton()
 	}
 	
 	
@@ -69,7 +71,35 @@ class GraphViewController: UIViewController {
 		self.view.addSubview(chart.view)
 	}
 	
+	func averageArrayScores(array: [Double]) -> Double {
+		
+		var x = 0.0
+		
+		for num in array {
+			x += num
+		}
+		
+		x = (x / Double(array.count))
+		x = x * 100
+		
+		return x
+	}
+	
+	
 	func setUpBarChart() {
+		
+		var trumpAverage = 0.0
+		var clintonAverage = 0.0
+		
+		if self.trumpScores.count != 0 {
+			trumpAverage = self.averageArrayScores(array: self.trumpScores)
+		} 
+		
+		if self.clintonScores.count != 0 {
+			clintonAverage = self.averageArrayScores(array: self.clintonScores)
+		}
+		
+		
 		let chartConfig = BarsChartConfig(
 			valsAxisConfig: ChartAxisConfig(from: 0, to: 8, by: 2)
 		)
@@ -80,12 +110,8 @@ class GraphViewController: UIViewController {
 			xTitle: "X axis",
 			yTitle: "Y axis",
 			bars: [
-				("A", 2),
-				("B", 4.5),
-				("C", 3),
-				("D", 5.4),
-				("E", 6.8),
-				("F", 0.5)
+				("Trump", trumpAverage),
+				("Clinton", clintonAverage)
 			],
 			color: UIColor.red,
 			barWidth: 20
