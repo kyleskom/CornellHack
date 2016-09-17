@@ -13,6 +13,8 @@ class GraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		
+		print("Starting up th app")
         // Do any additional setup after loading the view.
     }
 }
