@@ -6,5 +6,7 @@ use_frameworks!
 
 target 'CornellHack' do
 	pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
+	pod 'Firebase'
+	pod 'Firebase/Database'
 end
 

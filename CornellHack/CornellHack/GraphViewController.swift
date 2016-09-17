@@ -1,7 +1,54 @@
 import UIKit
 import SwiftCharts
+import FirebaseDatabase
 
 class GraphViewController: UIViewController {
+	
+	var tweetsRef: FIRDatabaseReference?
+	var trumpScores = [Double]()
+	var clintonScores = [Double]()
+	
+	// MARK: - Setting Up The View
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.setUpBarChart()
+		
+		self.tweetsRef = FIRDatabase.database().reference().child("tweets")
+	}
+
+	func pullFromTrump() {
+		self.tweetsRef?.child("trump").observe(.childAdded, with: { (snapshot) in
+			if let sentimentScoreDict = snapshot.value as? [String: Any] {
+				
+				if let score = sentimentScoreDict["sentimentScore"] as? Double {
+					
+					self.trumpScores.append(score)
+				}
+				
+				print(self.trumpScores)
+			} else {
+				print("doesnt work")
+			}
+		})
+	}
+	
+//	func pullFromClinton() {
+//		self.tweetsRef?.child("clinton").observe(.childAdded, with: { (snapshot) in
+//			
+//		})
+//	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(true)
+		
+		self.pullFromTrump()
+		//self.pullFromClinton()
+	}
+	
+	
+	
 	func setUpLineChart() {
 		let chartConfig = ChartConfigXY(
 			xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
@@ -47,16 +94,7 @@ class GraphViewController: UIViewController {
 		self.view.addSubview(chart.view)
 	}
 	
-	// encoding: JSONEncoding.default,
-	
-	override func viewDidLoad() {
-        super.viewDidLoad()
-
-		self.setUpBarChart()
-    }
 }
-
-
 
 
 
