@@ -5,7 +5,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'CornellHack' do
-    pod 'Alamofire',
-    :git => 'https://github.com/Alamofire/Alamofire.git'
+	pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
+	pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
 end
 
