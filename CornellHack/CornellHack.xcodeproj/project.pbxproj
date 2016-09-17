@@ -71,11 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				BA2FDEF11D8CEC6800ADDC9F /* AppDelegate.swift */,
+				BACBB40F1D8CF33F0067BEFF /* GraphViewController.swift */,
 				BA2FDEF51D8CEC6800ADDC9F /* Main.storyboard */,
 				BA2FDEF81D8CEC6800ADDC9F /* Assets.xcassets */,
 				BA2FDEFA1D8CEC6800ADDC9F /* LaunchScreen.storyboard */,
 				BA2FDEFD1D8CEC6800ADDC9F /* Info.plist */,
-				BACBB40F1D8CF33F0067BEFF /* GraphViewController.swift */,
 			);
 			path = CornellHack;
 			sourceTree = "<group>";

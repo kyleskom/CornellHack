@@ -1,5 +1,6 @@
 import UIKit
 import SwiftCharts
+import Alamofire
 
 class GraphViewController: UIViewController {
 	func setUpLineChart() {
@@ -47,10 +48,70 @@ class GraphViewController: UIViewController {
 		self.view.addSubview(chart.view)
 	}
 	
+	func sendPostRequestToMicrosoft() {
+		let url = "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment"
+		
+		let header = [
+			"Content-Type": "application/json",
+			"Ocp-Apim-Subscription-Key": "279e42df273d475d92337bd306daece3"
+		]
+		
+		let json = [
+			"documents": [
+				"languge": "en",
+				"id": "1",
+				"text": "hello, how are you my friend?"
+			]
+		]
+		
+		// let json2 = "{'documents': [{'language': 'en','id': '1','text': 'sup bro'}]}" 
+
+		Alamofire.request(url, method: .post, parameters: json, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+			
+			switch response.result {
+			case .success:
+				print("Validation Successful")
+				
+				print(response.result.value)
+				
+			case .failure(let error):
+				print(error)
+			}
+		}
+	}
+	
+	// encoding: JSONEncoding.default,
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
 		self.setUpBarChart()
+		self.sendPostRequestToMicrosoft()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
