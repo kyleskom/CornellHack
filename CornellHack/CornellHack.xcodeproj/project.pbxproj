@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		5B3826312FFAD3BCF096AC49 /* Pods_CornellHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850ED812BD5D5AC869E62415 /* Pods_CornellHack.framework */; };
 		BA2FDEF21D8CEC6800ADDC9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2FDEF11D8CEC6800ADDC9F /* AppDelegate.swift */; };
-		BA2FDEF41D8CEC6800ADDC9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2FDEF31D8CEC6800ADDC9F /* ViewController.swift */; };
 		BA2FDEF71D8CEC6800ADDC9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2FDEF51D8CEC6800ADDC9F /* Main.storyboard */; };
 		BA2FDEF91D8CEC6800ADDC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2FDEF81D8CEC6800ADDC9F /* Assets.xcassets */; };
 		BA2FDEFC1D8CEC6800ADDC9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2FDEFA1D8CEC6800ADDC9F /* LaunchScreen.storyboard */; };
+		BACBB4101D8CF33F0067BEFF /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBB40F1D8CF33F0067BEFF /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +20,11 @@
 		850ED812BD5D5AC869E62415 /* Pods_CornellHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CornellHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2FDEEE1D8CEC6800ADDC9F /* CornellHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornellHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2FDEF11D8CEC6800ADDC9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA2FDEF31D8CEC6800ADDC9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA2FDEF61D8CEC6800ADDC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA2FDEF81D8CEC6800ADDC9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA2FDEFB1D8CEC6800ADDC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA2FDEFD1D8CEC6800ADDC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACBB40F1D8CF33F0067BEFF /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		C7015C62352EC465B61A2125 /* Pods-CornellHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CornellHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CornellHack/Pods-CornellHack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,11 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				BA2FDEF11D8CEC6800ADDC9F /* AppDelegate.swift */,
-				BA2FDEF31D8CEC6800ADDC9F /* ViewController.swift */,
 				BA2FDEF51D8CEC6800ADDC9F /* Main.storyboard */,
 				BA2FDEF81D8CEC6800ADDC9F /* Assets.xcassets */,
 				BA2FDEFA1D8CEC6800ADDC9F /* LaunchScreen.storyboard */,
 				BA2FDEFD1D8CEC6800ADDC9F /* Info.plist */,
+				BACBB40F1D8CF33F0067BEFF /* GraphViewController.swift */,
 			);
 			path = CornellHack;
 			sourceTree = "<group>";
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA2FDEF41D8CEC6800ADDC9F /* ViewController.swift in Sources */,
 				BA2FDEF21D8CEC6800ADDC9F /* AppDelegate.swift in Sources */,
+				BACBB4101D8CF33F0067BEFF /* GraphViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +257,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -306,6 +307,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -334,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7015C62352EC465B61A2125 /* Pods-CornellHack.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9K6WT75NUU;
 				INFOPLIST_FILE = CornellHack/Info.plist;
@@ -348,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B65282B309E71D6FB55C4BC /* Pods-CornellHack.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9K6WT75NUU;
 				INFOPLIST_FILE = CornellHack/Info.plist;
