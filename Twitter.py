@@ -15,8 +15,8 @@ class Listener(StreamListener):
         try:
             print(data)
             tweet = data.split(',"text":"')[1].split('","source')[0]
-            savedTweet = str(time.time()) + "::" + tweet
-            #savedTweet = str(tweet)
+            #savedTweet = str(time.time()) + "::" + tweet
+            savedTweet = str(tweet)
             saveddata = open("SavedData.csv", 'a')
             saveddata.write(savedTweet)
             saveddata.write('\n')       # Add blank lines between saved data
@@ -34,4 +34,4 @@ auth = OAuthHandler(ckey, csecret)
 auth.set_access_token(atoken, asecret)
 
 twitterStream = Stream(auth, Listener())
-twitterStream.filter(track=["buffalo", "snow"])
+twitterStream.filter(track=["trump", "clinton"])

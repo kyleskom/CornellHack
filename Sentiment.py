@@ -19,6 +19,8 @@ jsonString = JSONEncoder().encode({
     }]
 })
 
+print(jsonString)
+
 
 try:
     conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
