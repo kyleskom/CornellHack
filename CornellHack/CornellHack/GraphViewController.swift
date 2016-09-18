@@ -118,6 +118,12 @@ class GraphViewController: UIViewController {
 		
 		self.view.addSubview(chart.view)
 	}
+	
+	
+	func setUpLineGraph() {
+		
+	}
+	
 }
 
 

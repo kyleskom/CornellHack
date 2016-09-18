@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B3826312FFAD3BCF096AC49 /* Pods_CornellHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850ED812BD5D5AC869E62415 /* Pods_CornellHack.framework */; };
 		BA0538F51D8DDEB900A05AB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA0538F41D8DDEB900A05AB8 /* GoogleService-Info.plist */; };
+		BA0538F71D8E289D00A05AB8 /* LineGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0538F61D8E289D00A05AB8 /* LineGraphViewController.swift */; };
 		BA2FDEF21D8CEC6800ADDC9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2FDEF11D8CEC6800ADDC9F /* AppDelegate.swift */; };
 		BA2FDEF71D8CEC6800ADDC9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2FDEF51D8CEC6800ADDC9F /* Main.storyboard */; };
 		BA2FDEF91D8CEC6800ADDC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2FDEF81D8CEC6800ADDC9F /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		0B65282B309E71D6FB55C4BC /* Pods-CornellHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CornellHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-CornellHack/Pods-CornellHack.release.xcconfig"; sourceTree = "<group>"; };
 		850ED812BD5D5AC869E62415 /* Pods_CornellHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CornellHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0538F41D8DDEB900A05AB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA0538F61D8E289D00A05AB8 /* LineGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphViewController.swift; sourceTree = "<group>"; };
 		BA2FDEEE1D8CEC6800ADDC9F /* CornellHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornellHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2FDEF11D8CEC6800ADDC9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA2FDEF61D8CEC6800ADDC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				BA2FDEFA1D8CEC6800ADDC9F /* LaunchScreen.storyboard */,
 				BA2FDEFD1D8CEC6800ADDC9F /* Info.plist */,
 				BA0538F41D8DDEB900A05AB8 /* GoogleService-Info.plist */,
+				BA0538F61D8E289D00A05AB8 /* LineGraphViewController.swift */,
 			);
 			path = CornellHack;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				BA2FDEF21D8CEC6800ADDC9F /* AppDelegate.swift in Sources */,
 				BACBB4101D8CF33F0067BEFF /* GraphViewController.swift in Sources */,
+				BA0538F71D8E289D00A05AB8 /* LineGraphViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
