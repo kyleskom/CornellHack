@@ -99,7 +99,6 @@ class GraphViewController: UIViewController {
 			clintonAverage = self.averageArrayScores(array: self.clintonScores)
 		}
 		
-		
 		let chartConfig = BarsChartConfig(
 			valsAxisConfig: ChartAxisConfig(from: 0, to: 8, by: 2)
 		)
@@ -119,7 +118,6 @@ class GraphViewController: UIViewController {
 		
 		self.view.addSubview(chart.view)
 	}
-	
 }
 
 
